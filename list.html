@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title> Статистика </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <p align="left">
+        <a id="Список_самых_высоких_гор_мира"></a>
+        <a href="index.html">
+            <font size="2">Самые высокие горы мира</font>
+        </a><br>
+        <a href="#Список_самых_высоких_гор_мира">Список самых высоких гор мира</a>
+    </p>
+    <hr>
+    <form>
+        <details>
+            <summary>График</summary>
+            <table border="0">
+                <tr>
+                    <th>Значение по оси OX</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="ace_OX">Страна<br>
+                        <input type="radio" name="ace_OX">Горная система<br>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="res">Максимальная абсолютная высота<br>
+                        <input type="checkbox" name="res">Минимальная абсолютная высота<br>
+                        <input type="checkbox" name="res">Кол-во горных вершин<br>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Построить">
+            <p>Здесь будет график</p>
+        </details>
+        <details>
+            <summary>Фильтр</summary>
+            <br>Название: <input type="text"><br><br>
+            Страна: <input type="text"><br><br>
+            Абс. высота: от <input type="text">до <input type="text"><br><br>
+            Отн. высота: от <input type="text">до <input type="text"><br><br>
+            Горная система <input type="text"><br><br>
+            Первое восхождение: от <input type="text">до <input type="text"><br><br>
+            <input type="submit" value="Найти"><br><br>
+        </details>
+        <details>
+            <summary>Сортировка</summary>
+            <br>Первый уровень:
+            <select name="fs_level">
+                <option value="0" selected>Нет</option>
+                <option value="1">Название</option>
+                <option value="2">Страна</option>
+                <option value="3">Абсолютная высота</option>
+                <option value="4">Относительная высота</option>
+                <option value="5">Горная система</option>
+                <option value="6">Первое восхождение</option>
+            </select> по убыванию? <input type="checkbox" name="fs_check">
+            <br>
+            <br>Второй уровень:
+            <select name="sc_level">
+                <option value="0" selected>Нет</option>
+                <option value="1">Название</option>
+                <option value="2">Страна</option>
+                <option value="3">Абсолютная высота</option>
+                <option value="4">Относительная высота</option>
+                <option value="5">Горная система</option>
+                <option value="6">Первое восхождение</option>
+            </select> по убыванию? <input type="checkbox" name="sc_check">
+            <br>
+            <br>Третий уровень:
+            <select name="tr_level">
+                <option value="0" selected>Нет</option>
+                <option value="1">Название</option>
+                <option value="2">Страна</option>
+                <option value="3">Абсолютная высота</option>
+                <option value="4">Относительная высота</option>
+                <option value="5">Горная система</option>
+                <option value="6">Первое восхождение</option>
+            </select> по убыванию? <input type="checkbox" name="tr_check">
+            <br>
+            <br>
+            <input type="submit" value="Сортировать">
+        </details>
+    </form>
+    <br>
+    <table border="1" align="left" cellspacing="0" width="80%">
+        <tr>
+            <th>Название</th>
+            <th>Страна</th>
+            <th>Абсолютная Высота</th>
+            <th>Относительная Высота</th>
+            <th>Горная система</th>
+            <th>Первое восхождение(дд.мм.гг)</th>
+        </tr>
+        <tr>
+            <td>Джомолунгма</td>
+            <td>Китай</td>
+            <td>8848</td>
+            <td>8848</td>
+            <td>Гималаи</td>
+            <td>29.05.1953</td>
+        </tr>
+        <tr>
+            <td>Канченджанга</td>
+            <td>Индия</td>
+            <td>8586</td>
+            <td>8586</td>
+            <td>Гималаи</td>
+            <td>25.05.1955</td>
+        </tr>
+        <tr>
+            <td>Лхоцзе</td>
+            <td>Китай</td>
+            <td>8516</td>
+            <td>8516</td>
+            <td>Гималаи</td>
+            <td>18.10.1979</td>
+        </tr>
+        <tr>
+            <td>Мантаранг</td>
+            <td>Китай</td>
+            <td>8485</td>
+            <td>8485</td>
+            <td>Гималаи</td>
+            <td>16.05.1981</td>
+        </tr>
+        <tr>
+            <td>Чо-Ойю</td>
+            <td>Китай</td>
+            <td>8188</td>
+            <td>8188</td>
+            <td>Гималаи</td>
+            <td>18.05.1954</td>
+        </tr>
+        <tr>
+            <td>Дхаулагири</td>
+            <td>Непал</td>
+            <td>8167</td>
+            <td>8167</td>
+            <td>Гималаи</td>
+            <td>13.05.1960</td>
+        </tr>
+        <tr>
+            <td>Манааслу</td>
+            <td>Непал</td>
+            <td>8156</td>
+            <td>8156</td>
+            <td>Гималаи</td>
+            <td>09.04.1956</td>
+        </tr>
+        <tr>
+            <td>Нанга Парбат</td>
+            <td>Пакистан</td>
+            <td>8126</td>
+            <td>8126</td>
+            <td>Гималаи</td>
+            <td>03.07.1953</td>
+        </tr>
+        <tr>
+            <td>Аннапурна I</td>
+            <td>Непал</td>
+            <td>8091</td>
+            <td>8091</td>
+            <td>Гималаи</td>
+            <td>03.06.1950</td>
+        </tr>
+        <tr>
+            <td>Gasherbrum I</td>
+            <td>Пакистан</td>
+            <td>8080</td>
+            <td>8080</td>
+            <td>Каракорум</td>
+            <td>05.07.1958</td>
+        </tr>
+        <tr>
+            <td>K2</td>
+            <td>Пакистан</td>
+            <td>8611</td>
+            <td>8611</td>
+            <td>Каракорум</td>
+            <td>31.07.1954</td>
+        </tr>
+        <tr>
+            <td>Гашербрум II</td>
+            <td>Пакистан</td>
+            <td>8035</td>
+            <td>8035</td>
+            <td>Каракорум</td>
+            <td>07.07.1956</td>
+        </tr>
+        <tr>
+            <td>Шиша Пангма</td>
+            <td>Китай</td>
+            <td>8027</td>
+            <td>8027</td>
+            <td>Гималаи</td>
+            <td>02.05.1964</td>
+        </tr>
+        <tr>
+            <td>Чогори</td>
+            <td>Пакистан</td>
+            <td>8611</td>
+            <td>8611</td>
+            <td>Каракорум</td>
+            <td>31.07.1954</td>
+        </tr>
+        <tr>
+            <td>Броуд Пик</td>
+            <td>Пакистан</td>
+            <td>8047</td>
+            <td>8047</td>
+            <td>Каракорум</td>
+            <td>09.06.1957</td>
+        </tr>
+        <tr>
+            <td>Аконкагуа</td>
+            <td>Аргентина</td>
+            <td>6960</td>
+            <td>6960</td>
+            <td>Анды</td>
+            <td>04.01.1897</td>
+        </tr>
+        <tr>
+            <td>Мерседарио</td>
+            <td>Аргентина</td>
+            <td>6770</td>
+            <td>6770</td>
+            <td>Анды</td>
+            <td>14.01.1910</td>
+        </tr>
+        <tr>
+            <td>Копертино</td>
+            <td>Чили</td>
+            <td>6094</td>
+            <td>6094</td>
+            <td>Чилийские Анд</td>
+            <td>24.01.1936</td>
+        </tr>
+        <tr>
+            <td>Париньякота</td>
+            <td>Перу</td>
+            <td>6080</td>
+            <td>6080</td>
+            <td>Анды</td>
+            <td>20.06.1910</td>
+        </tr>
+        <tr>
+            <td>Котопахи</td>
+            <td>Эквадор</td>
+            <td>5897</td>
+            <td>5897</td>
+            <td>Анды</td>
+            <td>14.08.1974</td>
+        </tr>
+        <tr>
+            <td>Суури</td>
+            <td>Чили</td>
+            <td>6025</td>
+            <td>6025</td>
+            <td>Чилийские Анд</td>
+            <td>19.07.1932</td>
+        </tr>
+        <tr>
+            <td>Саскачеван</td>
+            <td>Канада</td>
+            <td>3747</td>
+            <td>3747</td>
+            <td>Скелястые горы</td>
+            <td>27.08.1895</td>
+        </tr>
+        <tr>
+            <td>Денали</td>
+            <td>США</td>
+            <td>6190</td>
+            <td>6190</td>
+            <td>Аляска</td>
+            <td>07.09.1913</td>
+        </tr>
+        <tr>
+            <td>Гудзонав</td>
+            <td>США</td>
+            <td>4240</td>
+            <td>4240</td>
+            <td>Скалистые горы</td>
+            <td>24.08.1982</td>
+        </tr>
+        <tr>
+            <td>Стратосфера</td>
+            <td>Исландия</td>
+            <td>2119</td>
+            <td>2119</td>
+            <td>Исландские горы</td>
+            <td>15.06.1997</td>
+        </tr>
+        <tr>
+            <td>Пик Киншаса</td>
+            <td>Демократическая Республика Конго</td>
+            <td>5109</td>
+            <td>5109</td>
+            <td>Африканские горы</td>
+            <td>16.10.1984</td>
+        </tr>
+        <tr>
+            <td>Пик Снежный</td>
+            <td>Россия</td>
+            <td>3500</td>
+            <td>3500</td>
+            <td>Кавказ</td>
+            <td>10.05.1875</td>
+        </tr>
+        <tr>
+            <td>Ленин</td>
+            <td>Таджикистан</td>
+            <td>7134</td>
+            <td>7134</td>
+            <td>Памир</td>
+            <td>12.09.1957</td>
+        </tr>
+        <tr>
+            <td>Вершина Памир</td>
+            <td>Таджикистан</td>
+            <td>7495</td>
+            <td>7495</td>
+            <td>Памир</td>
+            <td>30.07.1960</td>
+        </tr>
+        <tr>
+            <td>Сюй Дин</td>
+            <td>Китай</td>
+            <td>6633</td>
+            <td>6633</td>
+            <td>Гималаи</td>
+            <td>20.08.1995</td>
+        </tr>
+        <tr>
+            <td>Майон</td>
+            <td>Филиппины</td>
+            <td>2462</td>
+            <td>2462</td>
+            <td>Филиппинские горы</td>
+            <td>23.07.1960</td>
+        </tr>
+        <tr>
+            <td>Меру</td>
+            <td>Непал</td>
+            <td>6670</td>
+            <td>6670</td>
+            <td>Гималаи</td>
+            <td>12.09.1995</td>
+        </tr>
+        <tr>
+            <td>Тетон</td>
+            <td>США</td>
+            <td>4197</td>
+            <td>4197</td>
+            <td>Скалистые горы</td>
+            <td>27.07.1934</td>
+        </tr>
+        <tr>
+            <td>Санторини</td>
+            <td>Греция</td>
+            <td>3653</td>
+            <td>3653</td>
+            <td>Киклады</td>
+            <td>18.08.1941</td>
+        </tr>
+        <tr>
+            <td>Везувий</td>
+            <td>Италия</td>
+            <td>1281</td>
+            <td>1281</td>
+            <td>Апеннины</td>
+            <td>17.12.1944</td>
+        </tr>
+        <tr>
+            <td>Этна</td>
+            <td>Италия</td>
+            <td>3329</td>
+            <td>3329</td>
+            <td>Апеннины</td>
+            <td>24.07.1999</td>
+        </tr>
+        <tr>
+            <td>Ключевская Сопка</td>
+            <td>Россия</td>
+            <td>4750</td>
+            <td>4750</td>
+            <td>Курильские острова</td>
+            <td>20.06.1994</td>
+        </tr>
+        <tr>
+            <td>Арарат</td>
+            <td>Турция</td>
+            <td>5137</td>
+            <td>5137</td>
+            <td>Тавр</td>
+            <td>05.09.1856</td>
+        </tr>
+        <tr>
+            <td>Тубкаль</td>
+            <td>Марокко</td>
+            <td>4167</td>
+            <td>4167</td>
+            <td>Верхнеатласские горы</td>
+            <td>04.09.1923</td>
+        </tr>
+        <tr>
+            <td>Северный Ледяной</td>
+            <td>Россия</td>
+            <td>5642</td>
+            <td>5642</td>
+            <td>Северный Урал</td>
+            <td>29.08.1952</td>
+        </tr>
+        <tr>
+            <td>Эльбрус</td>
+            <td>Россия</td>
+            <td>5642</td>
+            <td>5642</td>
+            <td>Кавказ</td>
+            <td>09.07.1874</td>
+        </tr>
+        <tr>
+            <td>Монблан</td>
+            <td>Франция/Италия</td>
+            <td>4807</td>
+            <td>4807</td>
+            <td>Альпы</td>
+            <td>08.08.1786</td>
+        </tr>
+        <tr>
+            <td>Джерач</td>
+            <td>Таджикистан</td>
+            <td>7134</td>
+            <td>7134</td>
+            <td>Памир</td>
+            <td>12.09.1957</td>
+        </tr>
+        <tr>
+            <td>Кималунг</td>
+            <td>Перу</td>
+            <td>6759</td>
+            <td>6759</td>
+            <td>Анды</td>
+            <td>25.07.1942</td>
+        </tr>
+        <tr>
+            <td>Кото-Пердидзен</td>
+            <td>Иркутская область, Россия</td>
+            <td>2460</td>
+            <td>2460</td>
+            <td>Саянские горы</td>
+            <td>15.10.1984</td>
+        </tr>
+        <tr>
+            <td>Вулкан Ла Малинче</td>
+            <td>Мексика</td>
+            <td>4461</td>
+            <td>4461</td>
+            <td>Сьерра-Мадре</td>
+            <td>15.01.1720</td>
+        </tr>
+        <tr>
+            <td>Лава Ра</td>
+            <td>Индонезия</td>
+            <td>3058</td>
+            <td>3058</td>
+            <td>Зондские острова</td>
+            <td>22.03.1885</td>
+        </tr>
+        <tr>
+            <td>Тальсаде</td>
+            <td>Бразилия</td>
+            <td>2902</td>
+            <td>2902</td>
+            <td>Серра-ду-Мар</td>
+            <td>20.10.1950</td>
+        </tr>
+        <tr>
+            <td>Акамеган</td>
+            <td>Канада</td>
+            <td>3596</td>
+            <td>3596</td>
+            <td>Скелястые горы</td>
+            <td>14.07.1827</td>
+        </tr>
+        <tr>
+            <td>Гран-Парадизо</td>
+            <td>Италия</td>
+            <td>4061</td>
+            <td>4061</td>
+            <td>Альпы</td>
+            <td>30.08.1863</td>
+        </tr>
+    </table>
+</body>
+
+</html>
