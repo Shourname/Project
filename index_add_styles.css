@@ -1,0 +1,132 @@
+.header {
+    margin: auto;
+    margin-top: -1.1%;
+    display: block;
+    width: 100%;
+    background-image: url("images/bg.jpg");
+    background-size: 100% 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.menu {
+    text-align: right;
+    padding-top: 5%;
+    width: 100%;
+    display: inline-block;
+}
+
+.content {
+    margin: 1.5% auto;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.info {
+    margin: 1% 5%;
+    text-align: center;
+}
+
+.main_content {
+    overflow: hidden;
+}
+
+.add_content {
+    overflow: hidden;
+}
+
+.image_main {
+    width: 70px;
+}
+
+.image_add {
+    width: 40px;
+}
+
+.main_image1 {
+    background-color: skyblue;
+    margin: 1%;
+}
+
+.main_image2 {
+    background-color: powderblue;
+    margin: 2%;
+}
+
+.add_image {
+    background-color: lavender;
+    display: inline-block;
+    margin: 1%;
+    padding: 1% 8%;
+}
+
+.add_title1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+}
+
+.mountain_main1 {
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    border: solid 2px;
+    border-color: lightgrey;
+    width: 60%;
+    height: 200px;
+    font-size: 0.6em;
+}
+
+.mountain_main2 {
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    border: solid 2px;
+    border-color: lightgrey;
+    width: 30%;
+    height: 200px;
+    font-size: 0.6em;
+}
+
+.mountain_add {
+    vertical-align: top;
+    background-color: antiquewhite;
+    display: inline-block;
+    text-align: left;
+    width: 45%;
+    height: 90px;
+    margin-top: 0.5%;
+    font-size: 0.6em;
+}
+
+.active{
+    background-color: rgba(211, 211, 211, 0.5);;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.student {
+    font-size: 0.7em;
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+}
+
+.connection {
+    font-size: 0.7em;
+    width: 60%;
+    display: inline-block;
+    text-align: right;
+}
