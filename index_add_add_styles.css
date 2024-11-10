@@ -1,0 +1,275 @@
+.grid-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.4fr 4fr 3fr 4fr 4fr 1fr;
+    grid-template-columns: 2fr 1fr 4fr 6fr 4fr 1fr 2fr;
+    grid-template-areas:
+                 "search search search search search search search"
+                 "menu menu menu menu menu menu menu"
+                 "ad ad ad ad ad ad ad"
+                 ". pictures pictures pictures pictures pictures ."
+                 ". . . main . . ."
+                 ". . add add add . ."
+                 ". . add add add . ."
+                 "footer footer footer footer footer footer footer";
+    width: 100%;
+    margin: auto;
+}
+
+.block-search {
+    grid-area: search;
+
+    display: grid;
+    align-items: center;
+    justify-items: end;
+    background-color: grey;
+}
+
+.block-search-line {
+    display: grid;
+    justify-content: end;
+    height: 80%;
+    width: 80%;
+    background-color: white;
+}
+
+.block-search-icon {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    background-color: grey;
+}
+
+.block-menu {
+    grid-area: menu;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    background-color: lightgrey;
+}
+
+.block-menu-naming {
+    display: grid;
+    align-items: center;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.block-menu-part {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin: 3px;
+    padding-left: 5px;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.block-menu-part-active {
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+    margin-top: 3px;
+    margin-right: 3px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.block-ad {
+    grid-area: ad;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+}
+
+.block-ad-black {
+    height: 7px;
+    margin-right: 3px;
+    background-color: black;
+}
+
+.block-pictures {
+    grid-area: pictures;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    gap: 3px;
+    background-color: white;
+}
+
+.block-pictures-part {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: PowderBlue;
+}
+
+.main-pictures {
+    width: 90px;
+}
+
+.add-pictures {
+    width: 130px;
+}
+
+.block-main-content {
+    grid-area: main;
+
+    display: grid;
+    margin: 3px;
+    text-align: center;
+    grid-template-rows: 0.5fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: white;
+}
+
+.block-add-content {
+    grid-area: add;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4px;
+    margin: 5px;
+    background-color: white;
+}
+
+.block-add-content-inside {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: justify;
+    gap: 10px;
+    padding: 5px;
+    font-size: 0.7em;
+    overflow: hidden;
+    border: 2px grey solid;
+}
+
+.block-add-content-inside-add {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.block-add-content-inside-picture {
+    display: grid;
+    justify-items: end;
+}
+
+.block-add-content-inside-text {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: justify;
+}
+
+.block-add-content-inside-picture-add {
+    justify-items: start;
+}
+
+.block-main-content-text {
+    overflow: hidden;
+    font-size: 0.5em;
+}
+
+.block-main-content-logo {
+    border-radius: 50%;
+    width: 80px;
+}
+
+.block-footer {
+    grid-area: footer;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: grey;
+}
+
+.block-footer-info {
+    text-align: right;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.ord-title {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 600px){
+    .grid-content {
+        grid-template-rows: 0.5fr 1fr 0.4fr 5fr 5fr 4fr 4fr 1fr;
+        grid-template-columns: 2fr 1fr 4fr 6fr 4fr 1fr 2fr;
+        grid-template-areas:
+                     "search search search search search search search"
+                     "menu menu menu menu menu menu menu"
+                     "ad ad ad ad ad ad ad"
+                     ". pictures pictures pictures pictures pictures ."
+                     ". . . main . . ."
+                     ". . add add add . ."
+                     ". . add add add . ."
+                     "footer footer footer footer footer footer footer";
+    }
+    
+    .block-menu {
+        grid-area: menu;
+    
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 0.5fr 1fr 1fr ;
+        background-color: white;
+    }
+
+    .block-menu-naming {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .block-menu-part-active {
+        margin-left: 3px;
+    }
+
+    .block-ad {
+        display: none;
+    }
+
+    .block-pictures {
+        grid-area: pictures;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        text-align: center;
+        grid: 3px;
+        background-color: white;
+    }
+
+    .block-main-content {
+        grid-area: main;
+    
+        display: grid;
+        margin: 3px;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+        background-color: white;
+    }
+}
