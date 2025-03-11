@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+    margin: auto;
+    border-spacing: 0px;
+}
+
+form {
+    margin: 5px;
+}
+
+th {
+    background-color: Darkgray;
+    border: 1px solid Grey;
+}
+
+td {
+    border: 1px solid Grey;
+}
+
+tr {
+    background-color: Silver;
+}
+
+span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+span h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.main_filter {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
